@@ -1,0 +1,116 @@
+.index {
+  background-color: #1f2d30;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  .status-bar {
+    height: var(--status-bar-height);
+    background-color: #211d30;
+  }
+
+  .content {
+    @include staticBg("/static/img/pages/index/home_bg.png");
+    flex: 1;
+    position: relative;
+    z-index: 1;
+
+    @keyframes cloud1 {
+      from {
+        transform: translateX(-554rpx);
+      }
+      to {
+        transform: translateX(750rpx);
+      }
+    }
+
+    @keyframes cloud2 {
+      from {
+        transform: translateX(-461rpx);
+      }
+      to {
+        transform: translateX(750rpx);
+      }
+    }
+
+    @keyframes cloud3 {
+      from {
+        transform: translateX(-170rpx);
+      }
+      to {
+        transform: translateX(750rpx);
+      }
+    }
+
+    .cloud {
+      position: absolute;
+      z-index: -2;
+      &-1 {
+        width: 554rpx;
+        height: 115rpx;
+        left: 0rpx;
+        top: 24rpx;
+        animation: cloud1 80s linear infinite;
+        // animation-delay: 3s;
+      }
+      &-2 {
+        width: 461rpx;
+        height: 124rpx;
+        left: 0rpx;
+        top: 150rpx;
+        animation: cloud2 40s linear infinite;
+      }
+      &-3 {
+        width: 170rpx;
+        height: 45rpx;
+        left: -400rpx;
+        top: 200rpx;
+        animation: cloud3 120s linear infinite;
+        // animation-delay: 10s;
+      }
+      &-4 {
+        width: 461rpx;
+        height: 124rpx;
+        left: -200rpx;
+        animation: cloud2 80s linear infinite;
+        // animation-delay: 5s;
+        top: 100rpx;
+      }
+    }
+
+    .gua1,
+    .gua,
+    .yan {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .yan {
+      width: 750rpx;
+      // height: 156.5rpx;
+      top: 410rpx;
+      right: 0;
+      z-index: 1;
+    }
+
+    .gua {
+      width: 144rpx;
+      height: 94.5rpx;
+      left: 0;
+      top: 600rpx;
+    }
+
+    .gua1 {
+      width: 179.5rpx;
+      height: 136rpx;
+      right: 0;
+      top: 550rpx;
+    }
+
+    .house {
+      position: absolute;
+      // bottom: 890rpx;
+      z-index: -1;
+      // left: ;
+    }
+  }
+}

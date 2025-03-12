@@ -1,0 +1,54 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^xh-(.*)": "@/xh/components/xh-$1/index.vue"
+    }
+  },
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "<%= appName %>",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      },
+      "auth": true,
+      "name": "Index"
+    },
+
+    {
+      "path": "pages/auth/login/index",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "navigationStyle": "custom"
+      },
+      "auth": false,
+      "name": "Login"
+    },
+    {
+      "path": "pages/auth/register/index",
+      "style": {
+        "navigationBarTitleText": "注册",
+        "navigationStyle": "custom"
+      },
+      "auth": false,
+      "name": "Register"
+    },
+    {
+      "path": "pages/auth/forget/index",
+      "style": {
+        "navigationBarTitleText": "忘记密码",
+        "navigationStyle": "custom"
+      },
+      "auth": false,
+      "name": "ResetPwd"
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "<%= appName %>",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}

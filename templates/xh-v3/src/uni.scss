@@ -1,0 +1,10 @@
+@mixin staticBg($path, $r: no-repeat, $w: 100%, $h: auto) {
+  background-image: url($path);
+  background-repeat: $r;
+  background-size: $w $h;
+}
+@mixin textShadow($size: 2rpx, $color: #32302e) {
+  text-shadow: #{"-"}+ $size #{"-"}+ $size 0 $color,
+    $size #{"-"}+ $size 0 $color, #{"-"}+ $size $size 0 $color,
+    $size $size 0 $color;
+}
