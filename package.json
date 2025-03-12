@@ -1,15 +1,19 @@
 {
-  "name": "@xh/uni-cli",
+  "name": "@xh-cli/uni-cli",
   "description": "成都小火uni项目脚手架",
-  "author": {
-    "name": "成都小火科技有限公司",
-    "email": "473583764@qq.com",
-    "url": "https://www.xiaohuokeji.com"
+  "author": "成都小火科技有限公司 <473583764@qq.com> (https://www.xiaohuokeji.com)",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wupopo/xh-uni-cli.git"
   },
-  "version": "0.0.1",
+  "bugs": {
+    "url": "https://github.com/wupopo/xh-uni-cli/issues"
+  },
+  "homepage": "https://github.com/wupopo/xh-uni-cli#readme",
   "type": "module",
   "bin": {
-    "xh-uni-cli": "./bin/index.js"
+    "xh-uni-cli": "bin/index.js"
   },
   "scripts": {
     "dev": "vite build -w",
@@ -28,5 +32,10 @@
     "@types/semver": "^7.5.8",
     "typescript": "^5.8.2",
     "vite": "^6.2.1"
-  }
+  },
+  "main": "src/index.ts",
+  "keywords": [
+    "cli"
+  ],
+  "license": "ISC"
 }
