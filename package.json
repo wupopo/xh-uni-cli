@@ -2,7 +2,7 @@
   "name": "@xh-cli/uni-cli",
   "description": "成都小火uni项目脚手架",
   "author": "成都小火科技有限公司 <473583764@qq.com> (https://www.xiaohuokeji.com)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wupopo/xh-uni-cli.git"

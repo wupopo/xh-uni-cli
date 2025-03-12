@@ -93,11 +93,9 @@ program
             fs.writeFileSync(manifest, res);
           }
         });
-
-
-        // execSync(`cd ${res.projectName} && ${res.npmManager} install`, {
-        //   stdio: "inherit",
-        // });
+        execSync(`cd ${res.projectName} && ${res.npmManager} install`, {
+          stdio: "inherit",
+        });
       });
   });
 

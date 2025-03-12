@@ -29160,6 +29160,9 @@ program.version("0.0.1").description("@xh/uni-cli 命令行工具").action(() =>
         fs.writeFileSync(manifest, res2);
       }
     });
+    require$$1$4.execSync(`cd ${res.projectName} && ${res.npmManager} install`, {
+      stdio: "inherit"
+    });
   });
 });
 program.parse();
