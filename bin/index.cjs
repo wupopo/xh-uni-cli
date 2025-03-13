@@ -28521,9 +28521,9 @@ function encode_char(c) {
   })(utils);
   return utils;
 }
-const version = "3.1.10";
+const version$1 = "3.1.10";
 const require$$3 = {
-  version
+  version: version$1
 };
 var hasRequiredEjs;
 function requireEjs() {
@@ -29085,6 +29085,10 @@ function requireEjs() {
 }
 var ejsExports = requireEjs();
 const ejs = /* @__PURE__ */ getDefaultExportFromCjs(ejsExports);
+const version = "1.0.5";
+const packagejson = {
+  version
+};
 const checkNpmManagerInstall = (name) => {
   try {
     require$$1$4.execSync(`${name} --version`, { stdio: "ignore" });
@@ -29093,7 +29097,7 @@ const checkNpmManagerInstall = (name) => {
     throw new Error(`${name} 未安装`);
   }
 };
-program.version("0.0.1").description("@xh/uni-cli 命令行工具").action(() => {
+program.version(packagejson.version).description("@xh/uni-cli 命令行工具").action(() => {
   inquirer.prompt([
     {
       type: "input",

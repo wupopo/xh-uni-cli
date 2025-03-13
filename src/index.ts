@@ -5,6 +5,7 @@ import fs from "fs";
 import semver from "semver";
 import { execSync } from "child_process";
 import ejs from "ejs";
+import packagejson from "../package.json";
 
 const checkNpmManagerInstall = (name: string) => {
   try {
@@ -16,7 +17,7 @@ const checkNpmManagerInstall = (name: string) => {
 };
 
 program
-  .version("0.0.1")
+  .version(packagejson.version)
   .description("@xh/uni-cli 命令行工具")
   .action(() => {
     inquirer
@@ -75,21 +76,21 @@ program
 
         const packagePath = path.join(targetDir, "package.json");
         ejs.renderFile(packagePath, res, (err, res) => {
-          if(!err){
+          if (!err) {
             fs.writeFileSync(packagePath, res);
           }
         });
 
-        const pagesPath = path.join(targetDir, "src",'pages.json');
+        const pagesPath = path.join(targetDir, "src", "pages.json");
         ejs.renderFile(pagesPath, res, (err, res) => {
-          if(!err){
+          if (!err) {
             fs.writeFileSync(pagesPath, res);
           }
         });
 
-        const manifest = path.join(targetDir, "src",'manifest.json');
+        const manifest = path.join(targetDir, "src", "manifest.json");
         ejs.renderFile(pagesPath, res, (err, res) => {
-          if(!err){
+          if (!err) {
             fs.writeFileSync(manifest, res);
           }
         });
