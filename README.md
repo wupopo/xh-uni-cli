@@ -1,6 +1,6 @@
 
 ## 安装
-<code>npm install -g @xh/uni-cli</code>
+<code>npm install -g @xiaohuo/uni-cli</code>
 
 ## 创建项目
-<code>xh-uni-cli</code>
+<code>uni-cli</code>
